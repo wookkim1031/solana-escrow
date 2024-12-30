@@ -1,6 +1,7 @@
 In Solana, smart contracts are called programs
 
 What is escrow? 
+============================================================================
 
 Escrow highlights well what a blockchain makes possible. 
 For example, Person A and B has an asset and wants to trade their assets.
@@ -17,13 +18,15 @@ Accounts are owned by programs. Only the account owner may debit an account and 
 All accounts to be written to or read must be passed into the entrypoint
 
 Program flow:
+============================================================================
 1. Someone calls the entrypoint
 2. The entrypoint forwards the arguments to the processor
 3. The processor asks **instruction.rs** to decode the **instruction_data** argument from the entrypoint function.
 4. Using the decoded data, the processor will now decide which processing function to use to process the request
 5. The processor may use **state.rs** to encode state into or decode the state of an account which has been passed into the entrypoint
 
-Theroy
+Theory
+============================================================================
 - the devleopers should use the data field to save data inside accounts
 - the token program owns token accounts which - inside their data field - hold relevant information 
 - the token program also owns token mint accounts with relevant data
@@ -41,9 +44,7 @@ keypair file itself, which is stored as insecure plain text
 BIP39 Passphrase (empty for none): 
 
 Wrote new keypair to /Users/joki/.config/solana/id.json
-============================================================================
 pubkey: 4jYTnr73dsbMxRUQaVtKf9VYRnPpWyzhMDgCV93DNGQU
-============================================================================
+
 Save this seed phrase and your BIP39 passphrase to recover your new keypair:
 video shallow pitch tourist early make side ketchup gospel permit bleak desk
-============================================================================
