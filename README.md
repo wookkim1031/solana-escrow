@@ -48,3 +48,10 @@ pubkey: 4jYTnr73dsbMxRUQaVtKf9VYRnPpWyzhMDgCV93DNGQU
 
 Save this seed phrase and your BIP39 passphrase to recover your new keypair:
 video shallow pitch tourist early make side ketchup gospel permit bleak desk
+
+How to run the program: 
+
+1. cargo build-bpf --bpf-out-dir=dist/program
+2. put "setup-validator": "solana-test-validator -r --mint E2F3fsS1HpsLb2VpEgsA5ztfo83CWFWW4jWpC6FvJ6qR --bpf-program 4yBTZXsuz7c1X3PJF4PPCJr8G6HnNAgRvzAWVoFZMncH" in package.json script
+3. Run npm run setup-validator programs/escrow/dist/program/escrow.so
+4. 
